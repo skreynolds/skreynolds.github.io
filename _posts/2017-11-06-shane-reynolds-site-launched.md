@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hank Quinlan, Horrible Cop, Launches Site"
-date: 2014-04-30
+title: "The Start of My Academic Blog"
+date: 2017-11-06
 ---
 
 Well. Finally got around to putting this old website together.
