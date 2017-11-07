@@ -17,25 +17,32 @@
 			{% include analytics.html %}
 			
 		</head>
-		<body>
-			<header>
+		
+		<body>	
+			<div class="wrap">
 				<div style="float:left; margin-top:10px; margin-right:10px">
 					<a href="/feed.xml">
 						<img src="/assets/feed.png" width="40">
 					</a>
 				</div>
-			</header>
-			<nav>
-	    		<ul>	
-				<li><a href="/">home</a></li>
-	        		<li><a href="/about">about</a></li>
-	    		</ul>
-			</nav>
+				
+				<nav style="float:left; margin-top:10px; margin-right:10px">
+					<ul>	
+						<li><a href="/">home</a></li>
+	        			<li><a href="/about">about</a></li>
+	    			</ul>
+				</nav>
+			</div>
+			<div class="wrap">
+				<h1 style="float:left; margin-top:10px; margin-right:10px">{{ page.title }}</h1>
+			</div>
+
 			<div class="container">
 			
 			{{ content }}
 			
 			</div><!-- /.container -->
+			
 			<footer>
 	    		<ul>
 	        		<li><a href="mailto:shane.k.reynolds@gmail.com">email</a></li>
