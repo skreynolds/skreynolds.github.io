@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Start of My Academic Blog"
+title: "the start of my academic blog"
 date: 2017-11-06
 ---
 
