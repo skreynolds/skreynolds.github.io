@@ -1,2 +1,3 @@
 name: skreynolds academic blog
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
