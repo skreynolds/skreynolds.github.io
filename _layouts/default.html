@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
+			<meta name="viewport" content="width=device-width">
+    		<meta name="description" content="A blog about robots and stuff.">
+    		<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrej Karpathy blog posts" />
+			
+			<!-- Custom style file -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			
+			<!-- Mathjax capability for them posts -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+			
+
 			{% include analytics.html %}
+			
 		</head>
 		<body>
 			<nav>
