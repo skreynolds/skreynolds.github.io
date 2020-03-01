@@ -1,34 +1,42 @@
+/* base */
+/*-------------------------*/
+
 body {
 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
     margin: 60px auto;
     width: 70%;
 }
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
+
+a { text-decoration: none; color: #2a7ae2; }
+
+a:hover { text-decoration: underline; }
+
 h1 {
-    font-size: 3em;
+    font-size: 30px;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 16px;
+    line-height: 1.5;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -42,6 +50,9 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+/* utility */
+/*-------------------------*/
 
 .wrap:before,
 .wrap:after { content:""; display:table; }
@@ -58,14 +69,56 @@ ul.posts li {
 .posts li { margin-bottom: 30px; }
 
 .posts .post-link {
-  font-size: 1.5em;
+  font-size: 20px;
   letter-spacing: -1px;
-  line-height: 1.4em;
+  line-height: 1;
   color: #2a7ae2
 }
 
 .posts .post-date {
   display: block;
-  font-size: 1em;
+  font-size: 15px;
   color: #818181;
 }
+
+/* layout styles */
+/*-------------------------*/
+
+
+
+/* post styles */
+/*-------------------------*/
+
+.post pre,
+.post code {
+  border: 1px solid #d5d5e9;
+  background-color: #eef;
+  padding: 8px 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 15px;
+  overflow:auto;
+}
+
+.post code { padding: 1px 5px; }
+
+.post pre code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* terminal */
+/*-------------------------*/
+
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.post pre.terminal code { background-color: #333; }
