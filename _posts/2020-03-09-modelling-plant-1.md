@@ -15,7 +15,7 @@ This post will cover the basics of how the literature models the governor, and w
 ## Governor Model
 The main component of a speed governor consists of two large masses which spin around a central axis, driven angular rotation of the turbine drive shaft. The image below, taken from Wikipedia, shows an example of this. 
 
-<img src="/assets/ashton_frost_engine_governor" alt="Ashton Frost Engine Governor" height="300" class="center">
+<img src="/assets/ashton_frost_engine_governor.jpg" alt="Ashton Frost Engine Governor" height="300" class="center">
 
 Elgerd's *Electric Energy System Theory: An Introduction* provides a schematic representation of the governing system of steam turbine, shown below. This schematic can be used as a starting point to derive the plant model. 
 
