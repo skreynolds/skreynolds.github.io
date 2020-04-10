@@ -10,7 +10,7 @@ When considering a single area power system, there are three main components tha
 * Turbine, which provides the mechanical torque to drive the generator; and
 * Generator and electrical load: desciribes the electrical power that is produced and the electrical torque from connected loads. 
 
-This post will cover the basics of how the literature models these elements, and will draw heavily from Kothari's awesome book: *Modern Power Systems Analysis*. 
+This post will cover the basics of how the literature models the governor, and will draw heavily from Kothari's awesome book: *Modern Power Systems Analysis*. 
 
 ## Governor Model
 The main component of a speed governor consists of two large masses which spin around a central axis, driven angular rotation of the turbine drive shaft. The image below, taken from Wikipedia, shows an example of this. 
