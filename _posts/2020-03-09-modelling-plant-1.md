@@ -34,16 +34,21 @@ $$\Delta y_A = k_C \Delta P_C \tag{1}$$
 An increase in $$\Delta P_C$$ will cause the pilot valve to move up, and high pressure oil will flow onto the top of the main piston forcing it downwards. As the steam valve opens, more steam will drive the turbine faster and causing the flyball governor to lower point $$B$$. Mathematically, the movement of $$C$$ can be expressed as the result of two separate inputs:
 
 1. Assuming that $$\Delta y_A$$ is small, using similar triangles, it can be written that:
+
 $$\Delta y_C = - \frac{l_2}{l_1} \Delta y_A$$
 
 2. Given a frequency increase $$\Delta f$$ point $$B$$ will move downward so, assuming $$A$$ is fixed, then using similar triangles it is clear that:
+
 $$\Delta y_C = \frac{l_1 + l_2}{l_1} \Delta y_B$$
 
 Letting $$k_1 = \frac{l_2}{l_1}$$, $$k_2 = \frac{l_1 + l_2}{l_1} k_2'$$, and using equation XXXX, the total movement in point $$C$$ can be expressed as:
+
 $$\Delta y_C = - k_1 k_C \Delta P_C + k_2 \Delta f$$
 
 A similar analysis, considering movement of point $$C$$ and $$E$$, can be undertaken to mathematically express the movement of point $$D$$. The analysis also makes use of similar triangles and results in the expression:
+
 $$\Delta y_D = \frac{l_4}{l3 + l_4} \Delta y_C + \frac{l3}{l_3 + l_4} \Delta y_E$$
 
 Letting $$$$ and $$$$, this can be re-expressed as:
+
 $$\Delta y_D = \frac{l_4}{l3 + l_4} \Delta y_C + \frac{l3}{l_3 + l_4} \Delta y_E$$
