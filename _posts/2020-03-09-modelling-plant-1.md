@@ -4,24 +4,21 @@ title: "modelling the governor"
 date: 2020-03-09
 ---
 
-When considering a single area power system, there are three main components that the literature focuses on:
+When looking at a single area power system, there are three main components that the literature has a tendency to focus on:
 
 * **Governor**: used for controlling the angular velocity (and frequency) of the system;
-* **Turbine**: which provides the mechanical torque to drive the generator; and
+* **Turbine**: this is the steam turbine which provides the mechanical torque to drive the generator; and
 * **Generator and electrical load**: desciribes the electrical power that is produced and the electrical torque from connected loads. 
 
-This post will cover the basics of how the literature models the governor, and will draw heavily from Kothari's awesome book: *Modern Power Systems Analysis*. 
+The derivations are a bit involved, but worth understanding. This post will cover the basics of how the literature goes about modelling a governor for a steam turbine. Other governor models can be more involved as the mechanical complexity of the turbine increases. The analysis below will draw heavily from Kothari's awesome book: [*Modern Power Systems Analysis*](https://www.amazon.com.au/Modern-Power-System-Analysis-4e/dp/1259003175/ref=sr_1_1?qid=1586508013&refinements=p_27%3ADr.+D+P+Kothari&s=books&sr=1-1). 
 
-## Governor Model
-The main component of a speed governor consists of two large masses which spin around a central axis, driven angular rotation of the turbine drive shaft. Elgerd's *Electric Energy System Theory: An Introduction* provides a schematic representation of the governing system of steam turbine, shown below. This schematic can be used as a starting point to derive the plant model. 
+## governor model
+The most important part of a speed governor are the two large masses (the pair of balls) which spin around a central axis. These masses are mechanically coupled to the the turbine drive shaft, so their angular velocity is a function of the turbine speed. Elgerd's [*Electric Energy System Theory: An Introduction*](https://www.amazon.com/Electric-Energy-Systems-Theory-Elgerd/dp/007099286X) provides a really great schematic representation of the governing system for a steam turbine, shown in Figure 1. This schematic is used to derive the plant model for the governor. 
 
-<img src="/assets/physical_governor_device.png" alt="Governor" height="400" class="center">
-
- Assuming that the system is operating at some steady state, we can say that the linkage mechanisms are static, and the pilot valve is closed. We note that the steam valve is open at some definite value, and the turbine is running at a constant speed. Under these conditions we define the following operating conditions:
-
-* $$f_0$$ = system frequency (speed)
-* $$P_{G0}$$ = generator output = turbine output (neglecting generator losses)
-* $$y_{E0}$$ = steam valve setting
+<figure>
+	<img src="/assets/physical_governor_device.png" alt="Governor" height="400" class="center">
+	<figcaption>Figure 1: A schematic of a steam governor</figcaption>
+</figure>
 
 If we let $$A$$ on the in the schematic be moved downward a little bit, $$\Delta y_A$$, the turbine power output will change by a directly proportional amount. Letting $$\Delta P_C$$ be the power increase, this can be expressed as:
 
@@ -31,20 +28,64 @@ An increase in $$\Delta P_C$$ will cause the pilot valve to move up, and high pr
 
 1. Assuming that $$\Delta y_A$$ is small, using similar triangles, it can be written that:
 
-$$\Delta y_C = - \frac{l_2}{l_1} \Delta y_A$$
+    $$\Delta y_C = - \frac{l_2}{l_1} \Delta y_A$$
 
 2. Given a frequency increase $$\Delta f$$ point $$B$$ will move downward so, assuming $$A$$ is fixed, then using similar triangles it is clear that:
 
-$$\Delta y_C = \frac{l_1 + l_2}{l_1} \Delta y_B$$
+    $$\Delta y_C = \frac{l_1 + l_2}{l_1} \Delta y_B$$
 
-Letting $$k_1 = \frac{l_2}{l_1}$$, $$k_2 = \frac{l_1 + l_2}{l_1} k_2'$$, and using equation XXXX, the total movement in point $$C$$ can be expressed as:
+Letting $$k_1 = \frac{l_2}{l_1}$$, $$k_2 = \frac{l_1 + l_2}{l_1} k_2'$$, and using equation (1), the total movement in point $$C$$ can be expressed as:
 
-$$\Delta y_C = - k_1 k_C \Delta P_C + k_2 \Delta f$$
+$$\Delta y_C = - k_1 k_C \Delta P_C + k_2 \Delta f \tag{2}$$
 
 A similar analysis, considering movement of point $$C$$ and $$E$$, can be undertaken to mathematically express the movement of point $$D$$. The analysis also makes use of similar triangles and results in the expression:
 
 $$\Delta y_D = \frac{l_4}{l3 + l_4} \Delta y_C + \frac{l3}{l_3 + l_4} \Delta y_E$$
 
-Letting $$$$ and $$$$, this can be re-expressed as:
+Letting $$k_3 = \frac{l_4}{l3 + l_4}$$ and $$k_4 = \frac{l3}{l_3 + l_4}$$, this can be re-expressed as:
 
-$$\Delta y_D = \frac{l_4}{l3 + l_4} \Delta y_C + \frac{l3}{l_3 + l_4} \Delta y_E$$
+$$\Delta y_D = k_3 \Delta y_C + k_4 \Delta y_E \tag{3}$$
+
+When there is some movement, $$\Delta y_D$$, of point $$D$$ the ports of the pilot valve will open and high pressure oil will plow onto the cylinder causing some movement $$\Delta y_E$$. If point $$D$$ moves up, high pressure oil will move point $$E$$ down, and conversely if point $$D$$ moves down, high pressure oil will move point $$E$$ upwards. To simplify the dynamics of this scenario, the following assumptions are made:
+
+1. Inertial reaction forces of the main piston and steam valve are negligible compared to the forces exerted on the piston by high pressure oil
+2. Due to the first assumption, the rate of oil admitted to to the cylinder is proportional to the port opening $$\Delta y_D$$.
+
+The volume of oil admitted to the cylinder is thus proportional to the time integral of $$\Delta y_D$$. Dividing the oil volume by the cross-sectional area of the piston:
+
+$$\Delta y_E = k_5 \int (- \Delta y_D) dt \tag{4}$$
+
+Taking the Laplace transform of equations (2), (3), and (4) gives the following:
+
+$$
+\begin{align}
+\Delta Y_C(s) &= -k_1 k_C \Delta P_C(s) + k_2 \Delta F(s)\tag{5} \\
+\Delta Y_D(s) &= k_3 \Delta Y_C(s) + k_4 \Delta Y_E(s)\tag{6} \\
+\Delta Y_E(s) &= - k_5 \frac{1}{s} \Delta Y_D(s)\tag{7}
+\end{align}
+$$
+
+Algebraically manipulating (5), (6), and (7) eliminates $$\Delta Y_C(s)$$ and $$\Delta Y_D(s)$$ and results in the following equation:
+
+$$\Delta Y_E(s) = \frac{k_1 k_3 k_C \Delta P_C(s) - k_2 k_3 \Delta F(s)}{k_4 + \frac{s}{k_5}} \tag{8}$$
+
+Equation (8) can be re-expressed as:
+
+$$\Delta Y_E(s) = [\Delta P_C(s) - \frac{1}{R} \Delta F(s)] \times (\frac{K_{sg}}{1 + T_{sg}s}) \tag{9}$$
+
+where
+
+$$
+\begin{align}
+R &= \frac{k_1 k_C}{k_2} \\
+K_{sg} &= \frac{k_1 k_3 k_C}{k_4} \\
+T_{sg} &= \frac{1}{T_{sg}} 
+\end{align}
+$$
+
+Equation (9) is the model of the governor in the frequency domain. The block diagram of this model can be seen in the figure below.
+
+<figure>
+	<img src="/assets/governor_block_diagram.png" alt="Governor" height="250" class="center">
+	<figcaption>Figure 2: Block diagram of the steam governor model in the frequency domain</figcaption>
+</figure>
