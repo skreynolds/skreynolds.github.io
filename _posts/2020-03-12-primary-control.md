@@ -26,7 +26,7 @@ $$\Delta P_L (s) = \frac{\Delta P_L}{s} \tag{1}$$
 
 Algebraic analysis of the block diagram in Figure 1 will yield a transfer function for the system, written as:
 
-$$\frac{\Delta F(s)}{\Delta P_L (s)} = - \frac{K_{gl}}{(1 + T_{gl}s) + \frac{K_{sg} K_{t} K_{gl}}{R (1 + T_{sg}s) (1 + T_{t}s)}} \tag{2}$$
+$$\frac{\Delta F(s)}{\Delta P_L (s)} \bigg|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + T_{gl}s) + \frac{K_{sg} K_{t} K_{gl}}{R (1 + T_{sg}s) (1 + T_{t}s)}} \tag{2}$$
 
 Equation (2) is a third order system - no one wants to actually undertake analysis on that by had. Instead, we can note that the time constant for the generator load is much larger than both the time constant for the turbine, and the time constant for the speed governor, that is:
 
