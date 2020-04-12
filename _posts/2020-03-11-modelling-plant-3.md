@@ -8,11 +8,13 @@ When looking at a single area power system, there are three main components that
 
 * **Governor**: used for controlling the angular velocity (and frequency) of the system;
 * **Turbine**: this is the steam turbine which provides the mechanical torque to drive the generator; and
-* **Generator load**: desciribes the electrical power that is produced and the electrical torque from connected loads. 
+* **Generator load**: describes the electrical power that is produced and the electrical torque from connected loads. 
 
-This post will cover the basics of how the literature models the turbine and the generator-load, and will draw heavily from Kothari's awesome book: *Modern Power Systems Analysis*.
+The derivations are a bit involved, but worth understanding. This post will cover the basics of how the literature goes about modelling a the generator load of a power system.
 
-## generator model
+The analysis below will draw heavily from Kothari's awesome book: [*Modern Power Systems Analysis*](https://www.amazon.com.au/Modern-Power-System-Analysis-4e/dp/1259003175/ref=sr_1_1?qid=1586508013&refinements=p_27%3ADr.+D+P+Kothari&s=books&sr=1-1).
+
+## generator load model
 If the turbine output is in some steady state, and the power system experiences some perturbation, then let the incremental power from the turbine be $$\Delta P_G$$. Noting that the main perturbation experienced by a power system is the change in load demand, $$\Delta P_L$$, the incremental input to the generator-load system is given by $$\Delta P_G - \Delta P_L$$.
 
 The increment in power input to the system is accounted for in two ways:
@@ -60,7 +62,9 @@ T_{gl} &= \frac{2H}{B f_0}
 \end{align}
 $$
 
-Equation (5) is the model of the generator-load in the frequency domain. The parameter $$K_{gl}$$ is referred to as the gain of the generator load; and the parameter $$T_{gl}$$ is referred to as the time constant of the generator load. The complete block diagram of governor model can be seen in Figure 2 below.
+Equation (5) is the model of the generator-load in the frequency domain. The parameter $$K_{gl}$$ is referred to as the gain of the generator load; and the parameter $$T_{gl}$$ is referred to as the time constant of the generator load.
+
+The complete block diagram of governor model can be seen in Figure 2 below.
 
 <figure>
 	<img src="/assets/generator_load_block_diagram.png" alt="Governor" height="200" class="center">

@@ -8,9 +8,11 @@ When looking at a single area power system, there are three main components that
 
 * **Governor**: used for controlling the angular velocity (and frequency) of the system;
 * **Turbine**: this is the steam turbine which provides the mechanical torque to drive the generator; and
-* **Generator load**: desciribes the electrical power that is produced and the electrical torque from connected loads. 
+* **Generator load**: describes the electrical power that is produced and the electrical torque from connected loads. 
 
-The derivations are a bit involved, but worth understanding. This post will cover the basics of how the literature goes about modelling a governor for a steam turbine. Other governor models can be more involved as the mechanical complexity of the turbine increases. The analysis below will draw heavily from Kothari's awesome book: [*Modern Power Systems Analysis*](https://www.amazon.com.au/Modern-Power-System-Analysis-4e/dp/1259003175/ref=sr_1_1?qid=1586508013&refinements=p_27%3ADr.+D+P+Kothari&s=books&sr=1-1). 
+The derivations are a bit involved, but worth understanding. This post will cover the basics of how the literature goes about modelling a governor for a steam turbine. Other governor models can be more involved as the mechanical complexity of the turbine increases.
+
+The analysis below will draw heavily from Kothari's awesome book: [*Modern Power Systems Analysis*](https://www.amazon.com.au/Modern-Power-System-Analysis-4e/dp/1259003175/ref=sr_1_1?qid=1586508013&refinements=p_27%3ADr.+D+P+Kothari&s=books&sr=1-1). 
 
 ## governor model
 The most important part of a speed governor are the two large masses (the pair of balls) which spin around a central axis. These masses are mechanically coupled to the the turbine drive shaft, so their angular velocity is a function of the turbine speed. Elgerd's [*Electric Energy System Theory: An Introduction*](https://www.amazon.com/Electric-Energy-Systems-Theory-Elgerd/dp/007099286X) provides a really great schematic representation of the governing system for a steam turbine, shown in Figure 1. This schematic is used to derive the plant model for the governor. 
@@ -71,19 +73,21 @@ $$\Delta Y_E(s) = \frac{k_1 k_3 k_C \Delta P_C(s) - k_2 k_3 \Delta F(s)}{k_4 + \
 
 Equation (8) can be re-expressed as:
 
-$$\Delta Y_E(s) = [\Delta P_C(s) - \frac{1}{R} \Delta F(s)] \times \bigg( \frac{K_{sg}}{1 + T_{sg}s} \bigg) \tag{9}$$
+$$\Delta Y_E(s) = \bigg[ \Delta P_C(s) - \frac{1}{R} \Delta F(s) \bigg] \times \bigg( \frac{K_{sg}}{1 + T_{sg}s} \bigg) \tag{9}$$
 
 where
 
 $$
 \begin{align}
-R &= \frac{k_1 k_C}{k_2} \\
-K_{sg} &= \frac{k_1 k_3 k_C}{k_4} \\
-T_{sg} &= \frac{1}{T_{sg}} 
+	R &= \frac{k_1 k_C}{k_2} \\
+	K_{sg} &= \frac{k_1 k_3 k_C}{k_4} \\
+	T_{sg} &= \frac{1}{T_{sg}} 
 \end{align}
 $$
 
-Equation (9) is the model of the governor in the frequency domain. The parameter $$R$$ is referred to as the speed regulation of the governor; the parameter $$K_{sg}$$ is referred to as the gain of the speed governor; and the parameter $$T_{sg}$$ is referred to as the time constant of the speed governor. The complete block diagram of governor model can be seen in Figure 2 below.
+Equation (9) is the model of the governor in the frequency domain. The parameter $$R$$ is referred to as the speed regulation of the governor; the parameter $$K_{sg}$$ is referred to as the gain of the speed governor; and the parameter $$T_{sg}$$ is referred to as the time constant of the speed governor.
+
+The complete block diagram of governor model can be seen in Figure 2 below.
 
 <figure>
 	<img src="/assets/governor_block_diagram.png" alt="Governor" height="250" class="center">
