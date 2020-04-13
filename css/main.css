@@ -134,3 +134,11 @@ ul.posts li {
 figcaption {
   font-weight: 700;
 }
+
+caption{
+  font-weight: 700;
+}
+
+th, td {
+  text-align: left;
+}
