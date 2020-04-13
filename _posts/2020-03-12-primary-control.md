@@ -28,30 +28,21 @@ Algebraic analysis of the block diagram in Figure 1 will yield a transfer functi
 
 $$\frac{\Delta F(s)}{\Delta P_L (s)} \bigg|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + T_{gl}s) + \frac{K_{sg} K_{t} K_{gl}}{R (1 + T_{sg}s) (1 + T_{t}s)}} \tag{2}$$
 
-Equation (2) is a third order system - no one wants to actually undertake analysis on that by had. Instead, we can note that the time constant for the generator load is much larger than both the time constant for the turbine, and the time constant for the speed governor, that is:
+Using equation (1) and equation (2) the response to the step input can be written as:
 
-$$T_{sg} \ll T_{t} \ll  T_{gl}$$
+$$\Delta F(s)|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + T_{gl}s) + \frac{K_{sg} K_{t} K_{gl}}{R (1 + T_{sg}s) (1 + T_{t}s)}} \times \frac{\Delta P_L}{s} \tag{3}$$
 
-Letting $$T_{sg} = T_{t} = 0$$, equation (2) simplifies to the much more palatable:
+Analysis of $$\Delta F(s)$$ as $$s \to 0$$ is a well known approach for determining the steady state of the system, that is:
 
-$$\frac{\Delta F(s)}{\Delta P_L (s)} \bigg|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + T_{gl}s) + \frac{K_{sg} K_{t} K_{gl}}{R}} \tag{3}$$
+$$
+\begin{align}
+	(\Delta f|_{\Delta P_C = 0})_{ss}  &= \lim_{s \to 0} s \Delta F(s)|_{\Delta P_C = 0} \tag{4} \\
+													&= - \bigg( \frac{K_{gl}}{1 + \frac{K_{sg} K_{t} K_{gl}}{R}} \bigg) \tag{5}
+\end{align}
+$$
 
-A further simplifying assumption that $$K_{sg} K_{t} = 1$$ allows us to express equation (3) as:
+The result shown in (5) highlights that proportional control (or primary control) will arrest frequency deviations from a load demand perturbation; however, the controller will not restore the frequency to the scheduled value.
 
-$$\frac{\Delta F(s)}{\Delta P_L (s)} \bigg|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + \frac{K_{gl}}{R}) + T_{gl}s} \tag{4}$$
+One way that we can restore frequency to the scheduled value is by adjusting the speed changer value for $$\Delta P_C$$. This could be done manually, but obviously it would be great if there was a way to automate this as well.
 
-Using equation (1) and equation (4) the response to the step input can be written as:
-
-$$\Delta F(s)|_{\Delta P_C(s) = 0} = - \frac{K_{gl}}{(1 + \frac{K_{gl}}{R}) + T_{gl}s} \times \frac{\Delta P_L}{s} \tag{5}$$
-
-Rearranging and taking the inverse Laplace transform equation (5) can be expressed in the time domain as:
-
-$$\Delta f(t) = - \frac{R K_{gl}}{R + K_{gl}} \bigg\{ 1 - \exp \bigg[ -\frac{t}{T_{gl}} \bigg( \frac{R}{F + K_{gl}} \bigg) \bigg] \bigg\} \Delta P_L \tag{6}$$
-
-Taking the limit of equation (6) as $$t \to \infty$$ shows that:
-
-$$\lim_{t \to \infty} \Delta f(t) = - \frac{R K_{gl}}{R + K_{gl}} \Delta P_L \tag{7}$$
-
-The result shown in (7) highlights that proportional control (or primary control) will arrest frequency deviations from a load demand perturbation; however, the controller will not restore the frequency to the scheduled value. Frequency can be restored by adjusting the speed changer value for $$\Delta P_C$$, but obviously this would be great if there was a way to automate this as well.
-
-The next post introduces an integral control loop to address this problem.
+The next post introduces an integral control loop to do exactly this.
