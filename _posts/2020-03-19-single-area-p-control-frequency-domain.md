@@ -25,7 +25,7 @@ MATLAB's Simulink was used to implement this frequency domain model. The program
 	<tr><td>Turbine time constant</td>				<td>\(T_{t}\)</td>			<td style="text-align: right;">0.50</td></tr>
 	<tr><td>Generator load gain</td>				<td>\(K_{gl}\)</td>			<td style="text-align: right;">1.25</td></tr>
 	<tr><td>Generator load time constant</td>		<td>\(T_{gl}\)</td>			<td style="text-align: right;">12.5</td></tr>
-	<tr><td>Speed regulation of the governor</td>	<td>\(R)</td>				<td style="text-align: right;">0.05</td></tr>
+	<tr><td>Speed regulation of the governor</td>	<td>\(R\)</td>				<td style="text-align: right;">0.05</td></tr>
 	<tr><td>Load demand change</td>					<td>\(\Delta P_L\)</td>		<td style="text-align: right;">0.02</td></tr>
 	<tr><td>Speed changer</td>						<td>\(\Delta P_C\)</td>		<td style="text-align: right;">0.00</td></tr>
 </table>
