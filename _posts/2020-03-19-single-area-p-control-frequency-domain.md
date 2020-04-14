@@ -18,15 +18,16 @@ MATLAB's Simulink was used to implement this frequency domain model. The program
 <center>
 <table style="width: 75%">
 	<caption>Table 1: A summary of the parameters and the values used in the Simulink model</caption>
-	<tr><th>Description</th>					<th>Parameter</th>			<th style="text-align: center;">Value</th></tr>
-	<tr><td>Speed governor gain</td>			<td>\(K_{sg}\)</td>			<td style="text-align: right;">1.00</td></tr>
-	<tr><td>Speed governor time constant</td>	<td>\(T_{sg}\)</td>			<td style="text-align: right;">0.20</td></tr>
-	<tr><td>Turbine gain</td>					<td>\(K_{t}\)</td>			<td style="text-align: right;">1.00</td></tr>
-	<tr><td>Turbine time constant</td>			<td>\(T_{t}\)</td>			<td style="text-align: right;">0.50</td></tr>
-	<tr><td>Generator load gain</td>			<td>\(K_{gl}\)</td>			<td style="text-align: right;">2.00</td></tr>
-	<tr><td>Generator load time constant</td>	<td>\(T_{gl}\)</td>			<td style="text-align: right;">20.00</td></tr>
-	<tr><td>Load demand change</td>				<td>\(\Delta P_L\)</td>		<td style="text-align: right;">0.02</td></tr>
-	<tr><td>Speed changer</td>					<td>\(\Delta P_C\)</td>		<td style="text-align: right;">0.00</td></tr>
+	<tr><th>Description</th>						<th>Parameter</th>			<th style="text-align: center;">Value</th></tr>
+	<tr><td>Speed governor gain</td>				<td>\(K_{sg}\)</td>			<td style="text-align: right;">1.00</td></tr>
+	<tr><td>Speed governor time constant</td>		<td>\(T_{sg}\)</td>			<td style="text-align: right;">0.20</td></tr>
+	<tr><td>Turbine gain</td>						<td>\(K_{t}\)</td>			<td style="text-align: right;">1.00</td></tr>
+	<tr><td>Turbine time constant</td>				<td>\(T_{t}\)</td>			<td style="text-align: right;">0.50</td></tr>
+	<tr><td>Generator load gain</td>				<td>\(K_{gl}\)</td>			<td style="text-align: right;">1.25</td></tr>
+	<tr><td>Generator load time constant</td>		<td>\(T_{gl}\)</td>			<td style="text-align: right;">12.5</td></tr>
+	<tr><td>Speed regulation of the governor</td>	<td>\(R)</td>				<td style="text-align: right;">0.05</td></tr>
+	<tr><td>Load demand change</td>					<td>\(\Delta P_L\)</td>		<td style="text-align: right;">0.02</td></tr>
+	<tr><td>Speed changer</td>						<td>\(\Delta P_C\)</td>		<td style="text-align: right;">0.00</td></tr>
 </table>
 </center>
 
