@@ -30,14 +30,14 @@ MATLAB's Simulink was used to implement this frequency domain model. The program
 </table>
 </center>
 
-The completed Simulink implementation of the block diagram shown in Figure 1 is shown in Figure 2. Note that there are a couple of block elements shown here, that are not included in Figure 1. The first is the scope --- this is a Simulink element that allows for the recording of simulation signals (it's a bit like an oscilloscope). The second is the out blocks --- these capture data and export it to the MATLAB workspace so you can make pretty plots and stuff.
+The completed Simulink implementation of the block diagram is shown in Figure 2. Note that there are a couple of block elements that are not included in Figure 1. The first is the scope --- this is a Simulink element that allows for the recording of simulation signals (it's a bit like an oscilloscope). The second is the out blocks --- these capture data and export it to the MATLAB workspace so you can make pretty plots and stuff.
 
 <figure>
 	<img src="/assets/single_area_model_P_control.svg" alt="Governor" height="250" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 
-The simulation was run for exactly 11 seconds. The step change in load demand, $$\Delta P_L$$, was set to take place at 1 second after the simulation started - this is shown in the topmost plot in Figure 3. The frequency response of the system can be seen in the lowermost plot in Figure 3. Note that the controller can arrest the frequency deviation; however, is unable to restore the frequency to the scheduled value. This is consistent with the analysis that was undertaken in the [primary control](https://skreynolds.github.io/blog/2020/03/12/primary-control) post.
+The simulation was run for exactly 11 seconds. The step change in load demand, $$\Delta P_L$$, was set to take place at 1 second after the simulation started --- this is shown in the topmost plot in Figure 3. The frequency response of the system can be seen in the lowermost plot in Figure 3. Note that the controller can arrest the frequency deviation; however, is unable to restore the frequency to the scheduled value. This is consistent with the analysis that was undertaken in the [primary control](https://skreynolds.github.io/blog/2020/03/12/primary-control) post.
 
 <figure>
 	<img src="/assets/single_area_p_control_plot.svg" alt="Governor" height="400" class="center">
