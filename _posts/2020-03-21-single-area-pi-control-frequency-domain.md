@@ -34,7 +34,7 @@ MATLAB's Simulink was used to implement this frequency domain model. The model p
 The completed Simulink implementation of the block diagram is shown in Figure 2. As with the previous post, there are a couple of additional block elements that are not shown in Figure 1 --- these are described in full in my [previous post](https://skreynolds.github.io/blog/2020/03/19/single-area-p-control-frequency-domain).
 
 <figure>
-	<img src="/assets/single_area_model_PI_control.svg" alt="Governor" height="300" class="center">
+	<img src="/assets/single_area_model_PI_control.svg" alt="Governor" width="100%" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 

@@ -27,7 +27,7 @@ date: 2020-03-25
 </center>
 
 <figure>
-	<img src="/assets/two_area_model_P_control.svg" alt="Governor" height="450" class="center">
+	<img src="/assets/two_area_model_P_control.svg" alt="Governor" width="100%" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 

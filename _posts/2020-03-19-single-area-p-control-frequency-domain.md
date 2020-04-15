@@ -34,7 +34,7 @@ MATLAB's Simulink was used to implement this frequency domain model. The program
 The completed Simulink implementation of the block diagram is shown in Figure 2. Note that there are a couple of block elements that are not included in Figure 1. The first is the scope --- this is a Simulink element that allows for the recording of simulation signals (it's a bit like an oscilloscope). The second is the out blocks --- these capture data and export it to the MATLAB workspace so you can make pretty plots and stuff.
 
 <figure>
-	<img src="/assets/single_area_model_P_control.svg" alt="Governor" height="250" class="center">
+	<img src="/assets/single_area_model_P_control.svg" alt="Governor" width="100%" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 
