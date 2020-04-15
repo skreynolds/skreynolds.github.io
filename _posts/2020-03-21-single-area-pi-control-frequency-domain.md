@@ -9,7 +9,7 @@ My previous [post](https://skreynolds.github.io/blog/2020/03/19/single-area-p-co
 This post will be almost identical, except for the fact that an additional feedback loop will be added to the model. I have previously written about [secondary control loops](https://skreynolds.github.io/blog/2020/03/15/secondary-control) - this type of controller sees an integral feedback loop connected to the speed changer input $$\Delta P_C$$. The block diagram can be seen in Figure 1 below.
 
 <figure>
-	<img src="/assets/single_area_pi_control.png" alt="Governor" height="200" class="center">
+	<img src="/assets/single_area_pi_control_model.png" alt="Governor" height="250" class="center">
 	<figcaption>Figure 1: Block diagram of a single area power system using a proportional-integral feedback loop to control frequency</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ MATLAB's Simulink was used to implement this frequency domain model. The model p
 The completed Simulink implementation of the block diagram is shown in Figure 2. As with the previous post, there are a couple of additional block elements that are not shown in Figure 1 --- these are described in full in my [previous post](https://skreynolds.github.io/blog/2020/03/19/single-area-p-control-frequency-domain).
 
 <figure>
-	<img src="/assets/single_area_model_PI_control.svg" alt="Governor" width="100%" class="center">
+	<img src="/assets/single_area_model_PI_control.svg" alt="Governor" height="325" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 

@@ -23,7 +23,7 @@ Now the power systems in each of the control areas in Figure 1 are very similar 
 2. re-analyse our generator-load demand model.
 
 <figure>
-	<img src="/assets/single_area_p_control.png" alt="Governor" height="200" class="center">
+	<img src="/assets/single_area_p_control_model.png" alt="Governor" height="250" class="center">
 	<figcaption>Figure 2: The single area power system makes a starting point for modelling a two area power system</figcaption>
 </figure>
 

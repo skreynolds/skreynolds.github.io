@@ -9,7 +9,7 @@ A power system is comprised of multiple generators whose output is fed to a tran
 In order to make things simpler to model, researchers often aggregate generators into a group called a *power area*. Generators are placed into a power area based on characteristics such as geographic location, or the provision of power to a subset of consumers. This simplificaiton is convenient for my purposes because I can use models for a [single governor](https://skreynolds.github.io/blog/2020/03/09/modelling-plant-1), a [single turbine](https://skreynolds.github.io/blog/2020/03/10/modelling-plant-2), and a [single generator load](https://skreynolds.github.io/blog/2020/03/11/modelling-plant-3) to model a single area power system. A block diagram of a single area power system can be seen in Figure 1. This particular model is using a proportional feedback loop to control frequency - the literature refers to this as [primary control](https://skreynolds.github.io/blog/2020/03/12/primary-control).
 
 <figure>
-	<img src="/assets/single_area_p_control.png" alt="Governor" height="200" class="center">
+	<img src="/assets/single_area_p_control_model.png" alt="Governor" height="250" class="center">
 	<figcaption>Figure 1: Block diagram of a single area power system using a proportional feedback loop to control frequency</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ MATLAB's Simulink was used to implement this frequency domain model. The program
 The completed Simulink implementation of the block diagram is shown in Figure 2. Note that there are a couple of block elements that are not included in Figure 1. The first is the scope --- this is a Simulink element that allows for the recording of simulation signals (it's a bit like an oscilloscope). The second is the out blocks --- these capture data and export it to the MATLAB workspace so you can make pretty plots and stuff.
 
 <figure>
-	<img src="/assets/single_area_model_P_control.svg" alt="Governor" width="100%" class="center">
+	<img src="/assets/single_area_model_P_control.svg" alt="Governor" height="250" class="center">
 	<figcaption>Figure 2: MATLAB Simulink model of the single area power system shown in Figure 1</figcaption>
 </figure>
 
