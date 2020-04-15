@@ -9,7 +9,7 @@ The models developed for the [governor](https://skreynolds.github.io/blog/2020/0
 The full block diagram can be seen in Figure 1.
 
 <figure>
-	<img src="/assets/single_area_p_control.png" alt="Governor" height="200" class="center">
+	<img src="/assets/single_area_p_control_model.png" alt="Governor" width="100%" class="center">
 	<figcaption>Figure 1: Individual models for the governor, turbine, and generator load can be combined to form a single governor controlled turbine-generator system powering a load.</figcaption>
 </figure>
 

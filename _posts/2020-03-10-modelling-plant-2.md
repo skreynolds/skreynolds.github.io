@@ -38,6 +38,6 @@ Equation (1) is the simplified model of the turbine in the frequency domain. The
 The block diagram showing this representation can be seen in Figure 3 below.   
 
 <figure>
-	<img src="/assets/turbine_simplified_block_diagram.png" alt="Governor" height="100" class="center">
+	<img src="/assets/turbine_model.png" alt="Turbine" width="75%" class="center">
 	<figcaption>Figure 3: simplified block diagram of the tandem compound reheat turbine</figcaption>
 </figure>

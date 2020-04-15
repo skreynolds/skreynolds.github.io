@@ -67,6 +67,6 @@ Equation (5) is the model of the generator-load in the frequency domain. The par
 The complete block diagram of governor model can be seen in Figure 2 below.
 
 <figure>
-	<img src="/assets/generator_load_block_diagram.png" alt="Governor" height="200" class="center">
+	<img src="/assets/generator_load_model.png" alt="Governor" width="75%" class="center">
 	<figcaption>Figure 2: Block diagram of the generator load model in the frequency domain</figcaption>
 </figure>
