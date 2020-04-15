@@ -90,6 +90,6 @@ Equation (9) is the model of the governor in the frequency domain. The parameter
 The complete block diagram of governor model can be seen in Figure 2 below.
 
 <figure>
-	<img src="/assets/governor_model.png" alt="Governor" width="75%" class="center">
+	<img src="/assets/governor_model.png" alt="Governor" height="250" class="center">
 	<figcaption>Figure 2: Block diagram of the steam governor model in the frequency domain</figcaption>
 </figure>

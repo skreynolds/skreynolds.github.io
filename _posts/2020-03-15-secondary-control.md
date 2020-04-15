@@ -9,7 +9,7 @@ The frequency domain models for the speed [governor](https://skreynolds.github.i
 Motivated by the fact that the system frequecy can be returned to the scheduled value by adjusting $$\Delta P_C$$, we add an additional feedback control loop to the system. The additional control loop using an integral controller, with gain parameter $$K_i$$. This additional feedback loop is referred to as the secondary control in the literature. The primary and secondary controllers together form what is commonly know as a proportional integral (PI) controller. The updated block diagram of the system is shown in Figure 1.
 
 <figure>
-	<img src="/assets/single_area_pi_control_model.png" alt="Governor" width="100%" class="center">
+	<img src="/assets/single_area_pi_control_model.png" alt="Governor" height="250" class="center">
 	<figcaption>Figure 1: Block diagram of a proportional integral controller for a single governor controlled generator supplying a single load</figcaption>
 </figure>
 
